@@ -1,0 +1,30 @@
+.manage-header a {
+    margin: 0 5vw;
+    font-weight: 600;
+    line-height: 25.2px;
+    padding-bottom: 5px;
+}
+
+.component-section {
+    text-align: left;
+}
+
+.pac-container {
+    z-index: 1051 !important;
+}
+
+@media screen and (max-width:767px) {
+    .manage-header a {
+        font-size: 90%;
+    }
+
+    .component-section {
+        margin: 50px 10vw 100px 10vw;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .component-section {
+        margin: 100px 10vw 0;
+    }
+}

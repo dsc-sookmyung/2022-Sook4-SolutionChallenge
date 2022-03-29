@@ -1,0 +1,209 @@
+.my-page-cafe {
+    margin-left: 5vw;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 200%;
+}
+
+.page-title {
+    margin-top: 5vh;
+    color: #443826;
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'ruddy';
+}
+
+.reward-notice {
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    line-height: 150%;
+    font-weight: 600;
+    font-size: 75%;
+    width: 80vw;
+    color: #443826;
+}
+
+.coffee-kg {
+    color: #443826;
+    font-family: 'ruddy';
+    line-height: 250%;
+    margin-top: 2vh;
+    width: 100vw !important;
+}
+
+.coffee-grounds-info-section, .coffee-grounds-char, .account-title-section, .form-section {
+    display: inline-block;
+}
+
+.coffee-grounds-info-section {
+    width: 45vw;
+    font-weight: 600;
+    line-height: 180%;
+    font-size: 110%;
+    color: #443826;
+}
+
+.coffee-grounds-char {
+    position: absolute;
+    right: 5vw;
+    top: 25vh;
+}
+
+.chars {
+    position: absolute;
+    right: 20vw;
+    top: 30vh;
+}
+
+.account-title-section, .form-section {
+    width: 45vw;
+    margin-top: 30vh;
+}
+
+.account-title-section {
+    vertical-align: top;
+    color: #F2F2F2;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 60.48px;
+    font-family: 'ruddy';
+    margin-top: 25vh;
+    margin-left: 5vw;
+}
+
+.whole-form-section {
+    margin-left: -5vw;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3Csvg width='1440' height='1024' viewBox='0 0 1440 1024' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M746.5 1.30366C459 21.3039 213.5 8.97032 0 1.30366V1100.5L1503 1118.5L1530.5 1.30366C1456.67 1.30366 1310.38 21.3037 1286 21.3037C960.5 21.3034 854.705 -6.22375 746.5 1.30366Z' fill='%235EB88A'/%3E%3C/svg%3E%0A");
+    padding-bottom: 150px;
+}
+
+.green-ground {
+    position: relative;
+    margin-left: -5vw;
+    margin-top: 10vh;
+    width: calc(100% + 5vw);
+    height: 100%;
+}
+
+.brown-ground {
+    width: calc(100% + 5vw);
+    height: 100%;
+    margin: -60px 0 -20px -5vw;
+}
+
+.edit-form {
+    text-align: left;
+    width: 100%;
+    color: #443826;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23.08px;
+}
+
+.edit-form input, .edit-form textarea {
+    width: 98%;
+    margin: 20px 0;
+    background: none;
+    border: none;
+    border: 2px solid black;
+    padding: 20px 9px;
+    position: relative !important;
+}
+
+.edit-form input::placeholder, .edit-form textarea::placeholder {
+    color: #443826;
+}
+
+.edit-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.edit-form input:focus, .form textarea:focus {
+    outline: none;
+}
+
+.edit-btn {
+    padding: 20px;
+    margin: 30px 0;
+    width: 100%;
+    color: #F2F2F2;
+    background-color: #443826;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23.08px;
+}
+
+.map-box div:first-child{
+    position: relative !important;
+}
+
+.edit-form-input {
+    color: #443826;
+    font-weight: 600;
+}
+
+@media screen and (max-width:767px) { 
+    .account-title-section {
+        font-size: 22px;
+        width: 40vw;
+        margin-top: 15vh;
+        margin-left: 10vw;
+    }
+
+    .form-section {
+        margin-top: 20vh;
+    }
+
+    .form-section form div {
+        font-size: 16px;
+    }
+
+    .edit-form input, .edit-form textarea {
+        width: 98%;
+        margin: 5px 0 5px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid black;
+        color: #443826;
+        padding: 2px;
+        position: relative !important;
+    }
+
+    .edit-btn {
+        padding: 8px;
+        margin: 10px 0;
+        width: 100%;
+        color: #F2F2F2;
+        background-color: #443826;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 23.08px;
+    }
+
+    .total-coffee-style {
+        font-size: 260%;
+    }
+
+    .coffee-kg {
+       font-size: 130%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .edit-form-input {
+        font-size: 110%;
+    }
+
+    .total-coffee-style {
+        font-size: 560%;
+    }
+
+    .green-ground {
+        margin: 20vh 0 0;
+    }
+}

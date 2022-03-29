@@ -1,0 +1,13 @@
+export { default as Home } from "./Home";
+export { default as Login } from "./Login";
+export { default as Logout } from './Logout'; 
+export { default as SignupCafe } from "./SignupCafe";
+export { default as CafeDetail } from "./CafeDetail";
+export { default as MainCafe } from "./MainCafe";
+export { default as CafeApply } from "./ApplyComponent";
+export { default as MyPageCafe } from "./MyPageCafe";
+export { default as Aboutus } from "./Aboutus";
+export { default as Manage} from './ManageComponent';
+export { default as NotFound } from "./NotFound";
+export { default as Privacy } from "./Privacy";
+export { default as Terms } from "./Terms";

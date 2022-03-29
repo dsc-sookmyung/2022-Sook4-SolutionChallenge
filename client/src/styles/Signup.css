@@ -1,0 +1,254 @@
+/* Login */
+.Login {
+    margin-bottom: 100px;
+}
+
+.Login-title {
+    font-size: 2.8rem;
+    color: #443826;
+    margin-top: 7vh;
+    font-family: 'ruddy';
+}
+
+.Login-outer-form {
+    background-color: #F2F2F2;
+    color: #443826;
+    margin-top: 7vh;
+}
+
+.form-group {
+    color: #443826;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-group input {
+    width: 350px;
+    height: 40px;
+    border: 2px solid;
+    background-color: #F2F2F2;
+    border-color: #443826;
+    padding-left: 10px;
+}
+
+.form-item input::placeholder {
+    color: #443826;
+    font-weight: bold;
+}
+
+.Login-button, .Joinus-button {
+    width: 300px;
+    height: 40px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.Login-button {
+    background-color: #443826;
+    color:#F2F2F2;
+    border: none;
+    font-size: 15px;
+}
+
+.Joinus-button {
+    color: #443826;
+    background-color:#F2F2F2;
+    border: 2px solid;
+    font-size: 15px;
+}
+
+.Login-or {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #443826;
+    margin: 10px 0;
+}
+
+.Login-or-line {
+    background-color: #443826;
+    width: 150px;
+    height: 1px;
+    margin: 0 20px;
+}
+
+.login-again-text {
+    color: #443826;
+}
+
+.login-error-text {
+    color: red;
+}
+
+/* Signup */
+.Signup {
+    display: flex;
+    flex-direction: row;
+    background-color: #F2F2F2;
+    width: 100vw;
+    color: #443826;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.Signup-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 7vh 0 0 10vw;
+}
+
+.Signup-title {
+    font-size: 2.8rem;
+    color: #443826;
+    font-family: 'ruddy';
+}
+
+.Signup-subtitle {
+    color: #443826;
+    margin-top: 3vh;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.Signup-subtitle a {
+    color: #443826;
+}
+
+.Signup-subtitle a:visited {
+    color:#443826;
+}
+
+.Signup-subtitle a:hover {
+    color:#5EB88A;
+}
+
+.Signup-outer-form {
+    margin: 10vh 10vh 0 0vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Signup-outer-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.Signup-outer-form .form-group h5 {
+    margin: 0;
+    padding: 10px 0 0 0;
+    margin-right: auto;
+}
+
+.Signup-outer-form button {
+    cursor: pointer;
+}
+
+.form-group-with-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-check-button {
+    width: 50px;
+    height: 30px;
+    color: #E5E5E5;
+    background-color: #443826;
+    font-size: 0.5rem;
+    border: none;
+}
+
+.Signup-submit-button {
+    height: 50px;
+    color: #E5E5E5;
+    background-color: #443826;
+    font-size: 1rem;
+    border: none;
+}
+
+.form-item-with-btn input {
+    width: 290px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.form-item-with-btn input::placeholder {
+    color: #443826;
+    
+    font-weight: bold;
+}
+
+.email-check-text-true,
+.email-check-text-false
+ {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.email-check-text-true {
+    color: green;
+}
+
+.email-check-text-false {
+    color: red;
+}
+
+@media screen and (max-width:767px) { 
+    .Signup {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .Signup-left {
+        margin: 7vh auto 0 auto;
+    }
+
+    .Signup-title {
+        width: 300px;
+        font-size: 2.8rem;
+        color: #443826;
+    }
+
+    .form-group input {
+        width: 80vw;
+    }
+
+    .form-item-with-btn {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Signup-outer-form {
+        margin: 10vh 5vh 0 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .Signup-submit-button {
+        width: 80vw;
+        height: 50px;
+        color: #E5E5E5;
+        background-color: #443826;
+        font-size: 1rem;
+        border: none;
+    }
+
+    .Login-button, .Joinus-button {
+        width: 60vw;
+    }
+}

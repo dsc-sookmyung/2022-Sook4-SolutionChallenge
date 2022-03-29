@@ -1,0 +1,100 @@
+.btn-section {
+    margin-top: 10vh;
+}
+
+.logo-section {
+    position: absolute;
+    width: 100%;
+    margin-top: 15vh;
+}
+
+.donation-btn {
+    background: #443826;
+    color: white;
+    width: 150px;
+    padding: 12px 15px;
+    font-size: 80%;
+}
+
+.donation-list-contents {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 0 30px 80px 30px;
+}
+
+.cancel-tooltip {
+    border-radius: 30px;
+    position: relative;
+    padding: 10px;
+}
+
+.cancel-tooltip:after { 
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #FFD200;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -15px;
+}
+
+.cancel-reason {
+  font-size: x-small;
+}
+
+.content-section {
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 180%;
+    display: inline-block;
+    width: 250px;
+    height: 20vh;
+    border: 2px solid black;
+    margin: 5vh 0 3vh 20px;
+}
+
+.content-link {
+    font-size: 12px;
+    margin-top: 3vh;
+}
+
+.empty-title {
+    font-size: 22px;
+    color: #737B7D;
+    line-height: 170%;
+    font-weight: 200;
+    margin-top: 15vh;
+}
+
+.date-section {
+    display: inline;
+}
+
+.pick-section {
+    float: right;
+}
+
+.date-and-pick {
+    margin-bottom: 5vh;
+}
+
+.pick-title {
+    padding: 4px;
+    font-weight: 600;
+    color: #443826;
+    line-height: 19.23px;
+}
+
+.donation-title {
+    margin: 5vh 0 20vh;
+    color: #443826;
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'ruddy';
+}

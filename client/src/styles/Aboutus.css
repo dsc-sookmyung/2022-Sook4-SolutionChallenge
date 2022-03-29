@@ -1,0 +1,290 @@
+/******************* People *******************/
+.about-part1 {
+    position: relative;
+    font-family: 'ruddy';
+}
+
+.about-bg-green {
+    width: 100vw;
+    height: auto;
+}
+
+.about-people {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate( -50%, -50% );
+    display: flex;
+    align-items: baseline;
+}
+
+.about-people-count {
+    font-size: 10vw;
+    color: #443826;
+    padding-right: 15px;
+}
+
+.about-people-ment {
+    font-size: 3vw;
+    color: #443826;
+}
+
+.about-people-img {
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    width: 23vw;
+    height: auto;
+}
+
+/******************* Coffee *******************/
+.about-coffee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ruddy';
+}
+
+.about-coffee-asset {
+    width: 30vw;
+    height: auto;
+    margin-right: 100px;
+}
+
+.about-coffee-right {
+    text-align: right;
+}
+
+.about-coffee-ment {
+    font-size: 3vw;
+    color: #443826;
+    text-align: right;
+}
+
+.about-coffee-count-kg {
+    display: flex;
+    align-items: baseline;
+    margin: auto;
+}
+
+.about-coffee-count {
+    font-size: 10vw;
+    color: #443826;
+    margin: 0 0 0 auto;
+    padding-right: 10px;
+}
+
+.about-coffee-kg {
+    font-size: 3vw;
+    color: #443826;
+}
+
+/******************* Kit *******************/
+.about-kit {
+    position: relative;
+    font-family: 'ruddy';
+}
+
+.about-bg-blue {
+    width: 100vw;
+    height: auto;
+}
+
+.about-kit-ment {
+    position: absolute;
+    font-size: 3vw;
+    color: #443826;
+    transform: translate( -50%, -50% );
+    top: 30%;
+    left: 40%;
+}
+
+.about-kit-count {
+    position: absolute;
+    font-size: 10vw;
+    color: #443826;
+    transform: translate( -50%, -50% );
+    top: 40%;
+    left: 20%;
+}
+
+.about-kit-asset {
+    position: absolute;
+    transform: translate( -50%, -50% );
+    top: 60%;
+    left: 80%;
+    width: 30vw;
+}
+
+/******************* Process *******************/
+.about-process {
+    position: relative;
+    min-height: 400px;
+}
+
+.about-pc-title {
+    font-size: 4vw;
+    color: #443826;
+    width: 100vw;
+    position: absolute;
+    transform: translate( -50%, -50% );
+    top: 40%;
+    left: 50%;
+    font-family: 'ruddy';
+}
+
+.about-pc-asset1 {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    transform: translate( -50%, -50% );
+    width: 8vw;
+}
+
+.about-pc-asset2 {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    transform: translate( -50%, -50% );
+    width: 8vw;
+}
+
+.about-pc-asset3 {
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    transform: translate( -50%, -50% );
+    width: 8vw;
+}
+
+.about-pc-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-pc-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-pc-asset4 {
+    padding: 30px;
+}
+
+.about-pc-asset41 {
+    padding: 30px;
+    width: 400px;
+    height: 300px;
+}
+
+.about-pc-asset44 {
+    padding: 30px;
+    width: 400px;
+    height: 300px;
+}
+
+.about-pc-ment {
+    font-size: 1.5vw;
+    color: #443826;
+    text-align: left;
+    padding-left: 3vw;
+    width: 40vw;
+}
+
+.about-pc-ment a {
+    text-decoration: underline;
+}
+
+.about-pc-ment a:visited {
+    color:#443826;
+}
+
+.about-pc-ment a:hover {
+    color:#5EB88A;
+}
+
+/******************* We *******************/
+.about-we {
+    position: relative;
+}
+
+.about-bg-yellow {
+    width: 100vw;
+    height: auto;
+    margin-top: 200px;
+}
+
+.about-we-title {
+    font-size: 4vw;
+    color: #443826;
+    width: 100vw;
+    position: absolute;
+    transform: translate( -50%, -50% );
+    top: 30%;
+    left: 50%;
+    font-family: 'ruddy';
+}
+
+.about-we-content {
+    position: absolute;
+    transform: translate( -50%, -50% );
+}
+
+#about-we-jh {
+    top: 60%;
+    left: 20%;
+}
+
+#about-we-ms {
+    top: 70%;
+    left: 40%;
+}
+
+#about-we-ji {
+    top: 60%;
+    left: 60%;
+}
+
+#about-we-wj {
+    top: 70%;
+    left: 80%;
+}
+
+.about-we-photo {
+    width: 16vw;
+}
+
+.about-we-name {
+    font-size: 2vw;
+    color: #000000;
+}
+
+.about-we-job {
+    font-size: 1.3vw;
+    color: #000000;
+}
+
+/******************* GDSC *******************/
+.about-gdsc-with {
+    font-size: 3vw;
+    font-family: 'ruddy';
+    color: #443826;
+}
+
+.about-gdsc-logo {
+    width: 60vw;
+    margin-bottom: 80px;
+}
+
+
+@media screen and (max-width:767px) { 
+
+    .about-pc-asset44 {
+        padding: 30px;
+        width: 50vw;
+        height: 40vw;
+    }
+
+}

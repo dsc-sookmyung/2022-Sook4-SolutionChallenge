@@ -1,0 +1,27 @@
+.cafe-detail {
+    margin-top: 5vh;
+}
+
+.detail-info {
+    width: 75%;
+    display: inline-block;
+    text-align: left;
+}
+
+.detail-title {
+    font-size: 24px;
+    margin: 2vh 0;
+}
+
+.detail-content {
+    font-size: 18px;
+    margin-bottom: 5vh;
+}
+
+.apply-btn {
+    background-color: #443826;
+    color: white !important;
+    font-size: 14px;
+    padding: 5px 12px;
+    margin: 0 10px !important;
+}

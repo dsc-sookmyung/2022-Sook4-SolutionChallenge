@@ -1,0 +1,51 @@
+.my-page-farmer {
+    margin: 5vh 5vh 0;
+    text-align: left;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 2vh;
+    font-weight: 300;
+}
+
+.section {
+    margin-bottom: 5vh;
+}
+
+.farmer-title {
+    font-size: 18px;
+    margin: 5vh 0 2vh;
+}
+
+.farmer-content {
+    font-size: 14px;
+    margin-bottom: 2vh;
+}
+
+.cafe-list {
+    overflow-x: scroll;
+    width: 400px;
+    display:table;
+}
+
+.apply-list {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto; 
+}
+
+.apply-list-card {
+    background: lightgray;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 3vh;
+    font-size: 14px;
+    width: 200px;
+    flex: 0 0 auto;
+    margin-right: 2vh;
+}
+
+.card-content span {
+    font-weight: bold;
+}

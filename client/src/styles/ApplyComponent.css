@@ -1,0 +1,252 @@
+.cafe-apply {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 15vh;
+}
+
+.logo-title {
+    font-weight: 900;
+    font-size: 260%;
+    line-height: 260%;
+    margin-bottom: 8vh;
+    font-family: 'ruddy';
+    color: #443826;
+}
+
+.form {
+    width: 45%;
+    text-align: left;
+    display: inline-block;
+}
+
+.form input, .form textarea {
+    width: 98%;
+    margin: 10px 0 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #443826;
+    padding: 2px;
+    position: relative !important;
+}
+
+.form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.form input:focus, .form textarea:focus {
+    outline: none;
+}
+
+.coffeeSize {
+    width: 92% !important;
+    margin: 0px 0 25px !important;
+}
+
+.submit-btn {
+    padding: 20px;
+    width: 45%;
+    color: #F2F2F2;
+    background-color: #443826;
+    border: none;
+    font-weight: 600;
+    font-size: 100%;
+    line-height: 23.08px;
+    margin: 40px 2.5%;
+}
+
+.react-datetime-picker {
+    margin: -50px 0 -20px;
+    display: block !important;
+}
+
+.react-datetime-picker__wrapper, .react-datetime-picker__inputGroup {
+    display: block !important;
+    border: none !important;
+    border-bottom: 1px solid white;
+    width: 100% !important;
+    color: #F2F2F2;
+}
+
+.react-datetime-picker__wrapper > input, .react-datetime-picker__wrapper > textarea,
+.react-datetime-picker__inputGroup > input, .react-datetime-picker__inputGroup > textarea {
+    border: none;
+}
+
+.react-datetime-picker__inputGroup__amPm {
+    color: #F2F2F2;
+    background: #443826 !important;
+}
+
+.coffee-size-form-section {
+    border: 1px solid #443826;
+    padding: 2vh 3vw;
+}
+
+.coffee-size-input {
+    display: inline-block;
+    width: 85% !important;
+    border: none !important;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 76.92px;
+    color: #443826;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.coffee-size-input-unit {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 76.92px;
+    color: #443826;
+    float: right;
+}
+
+.method-form-section {
+    position: relative;
+    padding: 10px 5px;
+}
+
+.method-form-section button {
+    background-color: transparent;
+    width: 48%;
+    margin: 0 1%;
+    padding: 35px 5px;
+    font-weight: 600;
+    line-height: 25.64px;
+}
+
+.left-side, .right-side {
+    font-weight: 600;
+}
+
+.donate-back1, .donate-back2, .donate-back3, .donate-back4 {
+    position: absolute;
+}
+
+@media screen and (max-width:767px) { 
+    .logo-title {
+        font-size: 160%;
+        margin: 0 10px 5vh;
+    }
+
+    .left-side, .right-side {
+        line-height: 200%;
+    }
+
+    .left-side-name {
+        font-size: 20px;
+    }
+
+    .left-side-time {
+        font-size: 16px;
+    }
+
+    .left-side-location, .right-side-pickup, .right-side-amount {
+        font-size: 14px;
+    }
+
+    .method-form-section button {
+        font-size: 110%;
+    }
+
+    .form {
+        width: 85vw;
+    }
+
+    .donate-back1 {
+        top: 80vh;
+        left: 5vw;
+        width: 22.5vw;
+    }
+
+    .donate-back2 {
+        top: 15vh;
+        right: 5vw;
+        width: 12.5vw;
+    }
+
+    .donate-back3 {
+        top: 5vh;
+        left: 3%;
+        width: 25vw;
+    }
+
+    .donate-back4 {
+        top: 20vh;
+        right: 10vw;
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .left-side, .right-side { 
+        display: inline-block;
+        line-height: 228%;
+    }
+
+    .left-side {
+        width: 60%;
+    }
+
+    .right-side {
+        float: right;
+    }
+
+    .left-side-name {
+        font-size: 190%;
+    }
+
+    .left-side-time {
+        font-size: 160%;
+        margin-top: 2.5vh;
+    }
+
+    .left-side-location {
+        font-size: 130%;
+    }
+
+    .right-side-pickup {
+        text-align: center;
+        padding: 3px 10px;
+        background-color: #443826;
+        color: #f2f2f2;
+        font-size: 100%;
+        line-height: 128%;
+        float: right;
+    }
+
+    .right-side-amount {
+        font-size: 265%;
+        margin-top: 75px;
+    }
+
+    .method-form-section button {
+        font-size: 20px;
+    }
+
+    .donate-back1 {
+        top: 85vh;
+        left: 10vw;
+        width: 15vw;
+    }
+
+    .donate-back2 {
+        top: 15vh;
+        right: 10vw;
+        width: 8vw;
+    }
+
+    .donate-back3 {
+        top: 10vh;
+        left: 5%;
+        width: 20vw;
+    }
+
+    .donate-back4 {
+        top: 17.5vh;
+        right: 5vw;
+        width: 20vw;
+    }
+}

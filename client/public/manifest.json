@@ -1,0 +1,15 @@
+{
+  "short_name": "BeanYard",
+  "name": "BeanYard",
+  "icons": [
+    {
+      "src": "BeanYard_Logo2.png",
+      "type": "image/png",
+      "sizes": "213x164"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

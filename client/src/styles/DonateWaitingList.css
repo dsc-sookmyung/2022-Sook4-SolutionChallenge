@@ -1,0 +1,150 @@
+
+.button-section div {
+    border-radius: 37.5px;
+    border: 2px solid #443826;
+    display: inline-block;
+
+    font-weight: 400;
+    line-height: 25.64px;
+    margin: 0 9px;
+}
+
+.table-check-btn {
+    font-weight: 600;
+    line-height: 23.08px;
+    cursor: pointer;
+}
+
+.check-btn {
+    background-color: #443826;
+    color: #F2F2F2;
+}
+
+.dialog-input-section {
+    margin: 0 auto;
+    display: table;
+}
+
+.dialog-btn-section {
+    position: fixed;
+    bottom: 11vh;
+    left: 32.5vw;
+    width: 100%;
+}
+
+.dialog-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 2% 3%;
+    font-size: 135%;
+}
+
+.close-btn {
+    text-align: right;
+    color: white;
+    font-size: 130%;
+    font-weight: 800;
+    margin: 15px 30px;
+}
+
+#dialog-inside {
+    position: fixed;
+    top: 3vh;
+    bottom: 5vh;
+    right: 10vw;
+    left: 10vw;
+    padding: 15px;
+    background-color: #443826;
+    z-index: 20;
+    border: none;
+    height: 85vh;
+    overflow: hidden;
+}
+
+#dialog-outside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 10;
+}
+
+.table-title {
+    display: inline-block;
+}
+
+.table-content span {
+    display: inline-table;
+}
+
+.cancel-input {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: left;
+    margin: 30px 0;
+}
+
+.cancel-input > label div {
+    margin-left: 17px;
+    display: inline-block;
+}
+
+.cancel-input input {
+    width: 2vw;
+    height: 2vh;
+}
+
+@media screen and (max-width:767px) {
+    .table-content {
+        width: 100% !important;
+        margin: 1vh 0 !important;
+    }
+
+    .button-section div {
+        padding: 7.5px 3%;
+    }
+
+    .table-section {
+        font-size: 80%;
+    }
+    
+    .dialog-btn {
+        font-size: 90%;
+    }
+
+    .map-dialog {
+        margin: 0 2px;
+    }
+
+    .table-check-btn {
+        width: 20% !important;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .table-content {
+        display: inline-block;
+    }
+
+    .button-section div {
+        padding: 7.5px 30px;
+    }
+
+    .table-section {
+        font-size: 90%;
+    }
+
+    .dialog-btn {
+        font-size: 135%;
+    }
+
+    .map-dialog {
+        margin: 0 25px;
+    }
+}

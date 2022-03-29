@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: "futura";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
+  background: #F2F2F2;
+}
+
+code {
+  font-family: "futura";
+}
