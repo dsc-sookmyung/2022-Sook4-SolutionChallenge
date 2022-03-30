@@ -104,7 +104,7 @@ const Aboutus = () => {
 
             <div className="about-process">
                 <p className="about-pc-title">
-                    The process of making coffee fertilizer kits
+                    The process of making Home Gardening kits
                 </p>
                 <AboutAsset31 className="about-pc-asset1" />
                 <AboutAsset32 className="about-pc-asset2" />
@@ -162,7 +162,7 @@ const Aboutus = () => {
                     <p className="about-pc-ment">
                         5. This well-made fertilizer is made into a kit with soil, pots and seeds. And then provided to you through funding.
                         <a href={"https://www.ycrowdy.com/r/gdscbeanyard"} target="_blank" rel="noopener noreferrer">
-                            <p>Go to funding page and get BeanYard Kit!</p>
+                            <p>Go to funding page and get Home Gardening Kit!</p>
                         </a>
                     </p>
                 </div>

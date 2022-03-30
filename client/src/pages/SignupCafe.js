@@ -14,7 +14,7 @@ const SignupCafe = () => {
                 <div className="Signup-subtitle">
                     <a href={"https://www.ycrowdy.com/r/gdscbeanyard"} target="_blank" rel="noopener noreferrer">
                         Do you want to grow your own garden?<br />
-                        Go to funding page and get BeanYard Kit!
+                        Go to funding page and get Home Gardening Kit!
                     </a>
                 </div>
             </div>
