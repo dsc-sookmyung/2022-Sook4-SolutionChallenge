@@ -27,13 +27,13 @@
     
     - By acting as a middle manager, we are expanding our projects in various directions.
       1) Receiving coffee grounds, Making fertilizers, and Delivering them to farmers.
-      2) Selling Plant kits including fertilizers to make profits.
+      2) Selling Home Gardening kits including fertilizers to make profits.
  
 **2️⃣ Climate Action Trough Funding**
 
     - We started funding to promote Climate Change to people who are not familiar with it.
     
-    - It is to help everyone solve the Greenhouse Gas Problem by selling eco-freindly Plant kits,
+    - It is to help everyone solve the Greenhouse Gas Problem by selling eco-freindly Home Gardening kits,
       including fertilizers made from coffee grounds.
     
     - Funding has the advantage of more convenient distribution of revenue structures,
