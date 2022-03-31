@@ -53,7 +53,35 @@
 <br><br>
 
 ## 🍉 Whole Process
-(페이지들 보여주면서 설명하기)
+### Home
+
+<img src="https://user-images.githubusercontent.com/68044754/161121241-c9617a8e-7c4b-4afb-8bf4-f1933f9b3138.gif"/>
+
+### About Us
+
+<img src="https://user-images.githubusercontent.com/68044754/161121209-2f1a8453-90d0-4b2c-9601-5b8b8cdc70f4.gif"/>
+
+### Signup & Login
+
+<img src="https://user-images.githubusercontent.com/68044754/161121247-971092ee-2fb2-4828-a19c-0e817c5c1e02.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/161121251-ab34bcd8-2a66-4d88-b7b1-0098f488dc39.png" width="400" height="200" />
+
+### My Donations - Donation process
+
+<img src="https://user-images.githubusercontent.com/68044754/161121199-2b58ce72-5e02-4198-9ff1-6b0aadfbf51a.gif" />
+
+### My Profile
+
+<img src="https://user-images.githubusercontent.com/68044754/161121194-37208977-2eb5-4b50-aa2c-68d51002bd40.gif" />
+
+### [Administor] Donations
+
+The page for administrators to check the donation list and approve or reject donations.
+
+<img src="https://user-images.githubusercontent.com/68044754/161121169-18b6d170-045c-445b-a3aa-1be1d530d890.gif" />
+
+
+
 + 설명하면서 아래 개선점을 같이 얘기해주면 좋을것 같음
 2. UI, UX 개선
     
