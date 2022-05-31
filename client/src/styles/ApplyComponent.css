@@ -8,24 +8,21 @@
     font-weight: 900;
     font-size: 260%;
     line-height: 260%;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
     font-family: 'ruddy';
     color: #443826;
 }
 
 .form {
-    width: 45%;
+    width: 50%;
     text-align: left;
     display: inline-block;
 }
 
 .form input, .form textarea {
-    width: 98%;
-    margin: 10px 0 20px;
     background: none;
     border: none;
-    border-bottom: 1px solid #443826;
-    padding: 2px;
+    padding: 5px;
     position: relative !important;
 }
 
@@ -56,8 +53,7 @@
 }
 
 .react-datetime-picker {
-    margin: -50px 0 -20px;
-    display: block !important;
+    margin-top: -20px;
 }
 
 .react-datetime-picker__wrapper, .react-datetime-picker__inputGroup {
@@ -78,27 +74,25 @@
     background: #443826 !important;
 }
 
-.coffee-size-form-section {
+.cafe-apply-form-section {
     border: 1px solid #443826;
     padding: 2vh 3vw;
+    margin: 13px 0;
 }
 
-.coffee-size-input {
+.cafe-apply-input {
     display: inline-block;
-    width: 85% !important;
+    width: 24% !important;
     border: none !important;
-    font-size: 60px;
+    font-size: 130%;
     font-weight: 600;
-    line-height: 76.92px;
     color: #443826;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.coffee-size-input-unit {
-    font-size: 60px;
+.cafe-apply-input-unit {
     font-weight: 600;
-    line-height: 76.92px;
     color: #443826;
     float: right;
 }
@@ -123,6 +117,22 @@
 
 .donate-back1, .donate-back2, .donate-back3, .donate-back4 {
     position: absolute;
+}
+
+#pac-input {
+    display: inline-block;
+    margin-left: 14%;
+}
+
+.cafe-apply-weeks {
+    border-radius: 50%;
+    border: 2px solid #443826;
+    display: inline-block;
+    width: 9%;
+    padding: 3% 1.5%;
+    margin: 0 0.5%;
+    text-align: center;
+    font-size: 85%;
 }
 
 @media screen and (max-width:767px) { 
@@ -177,6 +187,14 @@
         top: 20vh;
         right: 10vw;
         width: 10vw;
+    }
+
+    .cafe-apply-input {
+        font-size: 90%;
+    }
+
+    #pac-input {
+        width: 41%;
     }
 }
 
@@ -248,5 +266,13 @@
         top: 17.5vh;
         right: 5vw;
         width: 20vw;
+    }
+
+    .cafe-apply-input {
+        font-size: 130%;
+    }
+
+    #pac-input {
+        width: 53%;
     }
 }

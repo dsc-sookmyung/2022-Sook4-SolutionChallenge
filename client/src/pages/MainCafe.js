@@ -4,8 +4,9 @@ import '../styles/MainCafe.css';
 import { AuthContext } from "../App";
 import { getApi } from "../api";
 import dayjs from 'dayjs';
-import {ReactComponent as Background} from '../assets/MainCafeThumbnail.svg';
-
+// import {ReactComponent as d} from '../assets/dontaion_thumbnail.svg';
+import {ReactComponent as Boxthumb} from '../assets/donationbox_thumbnail.svg';
+import {ReactComponent as Donatethumb} from '../assets/donation_thumbnail.svg';
 const MainCafe = () => {
     const authContext = useContext(AuthContext);
     const date = dayjs(new Date()).format('YYYY. MM. DD');
@@ -53,18 +54,27 @@ const MainCafe = () => {
     return (
         <div className="main-cafe">
             <div className="donation-list">
-                <div className="logo-section">
-                    <div className="logo-img">
-                        <span className="donation-title">My Donations</span>
+                <div style={{ display: 'block', marginTop: '5%' }}>
+                    <div className="donate-title-section">
+                        <Link to={`/donationbox`}>
+                            <div className="donation-title">FIND</div>
+                            <div className="donation-title">DONATION BOX</div>
+                            <div className="logo-img">
+                                <Boxthumb />
+                            </div>
+                        </Link>
                     </div>
-                    <div className="btn-section">
+
+                    <div className="donate-title-section">
                         <Link to={`apply`}>
-                            <button className="donation-btn">DONATE</button>
+                            <div className="donation-title">GO TO</div>
+                            <div className="donation-title">DONATIONS</div>
+                            <div className="logo-img">
+                                <Donatethumb />
+                            </div>
                         </Link>
                     </div>
                 </div>
-                <Background width={'75vw'} height={'50vh'} />
-
                 <div className="donation-list-contents">
                     {
                         info.length ?

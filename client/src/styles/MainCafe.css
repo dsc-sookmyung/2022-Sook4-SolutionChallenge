@@ -91,10 +91,15 @@
     line-height: 19.23px;
 }
 
+.donate-title-section {
+    display: inline-block;
+    margin: 0 6.5%;
+}
+
 .donation-title {
-    margin: 5vh 0 20vh;
     color: #443826;
     font-weight: 900;
     font-size: 48px;
     font-family: 'ruddy';
+    line-height: 77.22px;
 }

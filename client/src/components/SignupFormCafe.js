@@ -49,12 +49,12 @@ const SignupFormCafe = () => {
                 },
             };
             await axios.post(
-                "https://beanyard.app:8080/api/auth/email",
+                "http://27.96.134.100:8080/api/auth/email",
                 JSON.parse(temp),
                 config
             )
                 .then(({ status, data }) => {
-                    // console.log('data:', data);
+                    console.log('data:', data);
                     if (status === 201) { // 인증번호 받아옴
                         setVcode(data);
                         setEmailCheckMsg("Check the verification code sent to your email.");
@@ -106,7 +106,7 @@ const SignupFormCafe = () => {
         } else {
             // console.log(details.locationName);
             await axios.post(
-                "https://beanyard.app:8080/api/auth/register",
+                "http://beanyard.shop:8080/api/auth/register",
                 {
                     email: details.email,
                     password: details.password,

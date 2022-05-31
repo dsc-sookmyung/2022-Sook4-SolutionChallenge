@@ -15,8 +15,7 @@ const CollectMethod = ({ method, setMethodInformation }) => {
     return (
         <div className="cafe-apply">
             <div className="logo-title">
-                <div>Please choose</div>
-                <div>how to collect coffee grounds!</div>
+                I'll donate my coffee grounds by...
             </div>
             <div className="form">
                 <div className="method-form-section">
