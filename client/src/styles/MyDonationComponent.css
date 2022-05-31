@@ -14,13 +14,29 @@
     z-index: 1051 !important;
 }
 
+.donation-list-contents {
+    margin: 0 0 80px;
+}
+
+.content-section {
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 180%;
+    display: inline-block;
+    width: 26%;
+    height: 20vh;
+    border: 2px solid black;
+    margin: 5vh 0 3vh 10px;
+}
+
 @media screen and (max-width:767px) {
     .manage-header a {
         font-size: 90%;
     }
 
     .component-section {
-        margin: 50px 10vw 100px 10vw;
+        margin: 50px 5vw 0;
     }
 }
 

@@ -4,6 +4,7 @@ export { default as Logout } from './Logout';
 export { default as SignupCafe } from "./SignupCafe";
 export { default as CafeDetail } from "./CafeDetail";
 export { default as MainCafe } from "./MainCafe";
+export { default as MyDonation } from "./MyDonationComponent";
 export { default as CafeApply } from "./ApplyComponent";
 export { default as MyPageCafe } from "./MyPageCafe";
 export { default as Aboutus } from "./Aboutus";

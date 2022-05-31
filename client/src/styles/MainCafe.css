@@ -16,12 +16,6 @@
     font-size: 80%;
 }
 
-.donation-list-contents {
-    overflow-x: scroll;
-    white-space: nowrap;
-    margin: 0 30px 80px 30px;
-}
-
 .cancel-tooltip {
     border-radius: 30px;
     position: relative;
@@ -45,18 +39,6 @@
 
 .cancel-reason {
   font-size: x-small;
-}
-
-.content-section {
-    padding: 20px;
-    text-align: left;
-    font-size: 14px;
-    line-height: 180%;
-    display: inline-block;
-    width: 250px;
-    height: 20vh;
-    border: 2px solid black;
-    margin: 5vh 0 3vh 20px;
 }
 
 .content-link {
@@ -89,6 +71,7 @@
     font-weight: 600;
     color: #443826;
     line-height: 19.23px;
+    font-size: smaller;
 }
 
 .donate-title-section {

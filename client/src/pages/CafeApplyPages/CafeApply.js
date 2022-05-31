@@ -134,6 +134,7 @@ const CafeApply = ({ defaultCoffeeSize, mapIf, setMapInformation }) => {
                             <div className="cafe-apply-input">LOCATION</div>
                             <input
                                 id="pac-input"
+                                className="location-input"
                                 type="text"
                                 placeholder=""
                                 onKeyPress={getInfo}
@@ -162,7 +163,7 @@ const CafeApply = ({ defaultCoffeeSize, mapIf, setMapInformation }) => {
                                 </Map>
                             </div>
                         </div>
-                        <div className="cafe-apply-form-section" style={{ display: mapIf.donateType === 'POST' ? 'none' : 'block' }}>
+                        <div className="cafe-apply-form-section" style={{ display: mapIf.donateType === 'POST' ? 'none' : 'block', padding: '4vh 3vw' }}>
                             <div className="cafe-apply-input">WHEN</div>
                             <DateTimePicker
                                 onChange={onChange}
@@ -183,7 +184,7 @@ const CafeApply = ({ defaultCoffeeSize, mapIf, setMapInformation }) => {
                             <span className="cafe-apply-input-unit">g</span>
                         </div>
 
-                        <div style={{ display: mapIf.donateCycle === 'LONG' ? 'block' : 'none' }}>
+                        <div style={{ display: mapIf.donateCycle === 'DEFAULT' ? 'block' : 'none' }}>
                             <div
                                 className="cafe-apply-weeks"
                                 onClick={() => setWeeks(0)}

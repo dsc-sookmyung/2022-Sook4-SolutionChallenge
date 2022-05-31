@@ -6,6 +6,7 @@ import {
   Logout,
   SignupCafe,
   CafeDetail,
+  MyDonation,
   MainCafe,
   MyPageCafe,
   CafeApply,
@@ -89,6 +90,7 @@ function App() {
             <Route path='/logout' element={<Logout />} />
             <Route path='/signup/cafe' element={<SignupCafe />} />
             <Route path='/cafedetail/:postSeq' element={<CafeDetail />} />
+            <Route path='/mydonation/*' element={<MyDonation />} />
             <Route path='/maincafe' element={<MainCafe />} />
             <Route path='/maincafe/apply/*' element={<CafeApply />} />
             <Route path='/mypagecafe' element={<MyPageCafe />} />
