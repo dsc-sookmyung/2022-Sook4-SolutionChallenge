@@ -7,18 +7,23 @@ import '../styles/App.css';
 
 const Header = () => {
     const authContext = useContext(AuthContext);
+
     return (
         <header className="App-header">
             <div className="header-links">
                 {!authContext.state.token ? (
                     <>
-                        <div className="App-header-Login">
-                            <Link to="/aboutus">ABOUT US</Link>
+                        <div className="App-header-section" style={{ textAlign: 'left' }}>
+                            <Link to="/aboutus">ABOUT BEANYARD</Link>
+                            <Link to="/ourteam">OUR TEAM</Link>
+                            <Link to="/history">OUR HISTORY</Link>
                         </div>
-                        <Link to="/">
-                            <Logo width={60} height={60} />
-                        </Link>
-                        <div>
+                        <div className="App-header-section">
+                            <Link to="/">
+                                <Logo width={60} height={60} />
+                            </Link>
+                        </div>
+                        <div className="App-header-section" style={{ textAlign: 'right' }}>
                             <Link to="/login" className="my-page-plain">
                                 Login
                             </Link>
@@ -30,14 +35,18 @@ const Header = () => {
                 ) : (
                     authContext.state.userSeq === 3 ? (
                         <>
-                            <div className="App-header-Login">
-                                <Link to="/aboutus">ABOUT US</Link>
-                                <Link to="/donations/waiting">DONATIONS</Link>
+                            <div className="App-header-section" style={{ textAlign: 'left' }}>
+                                <Link to="/aboutus">ABOUT BEANYARD</Link>
+                                <Link to="/ourteam">OUR TEAM</Link>
+                                <Link to="/history">OUR HISTORY</Link>
                             </div>
-                            <Link to="/">
-                                <Logo width={60} height={60} />
-                            </Link>
-                            <div className="App-header-right">
+                            <div className="App-header-section">
+                                <Link to="/">
+                                    <Logo width={60} height={60} />
+                                </Link>
+                            </div>
+                            <div className="App-header-section" style={{ textAlign: 'right' }}>
+                                <Link to="/donations/waiting">DONATIONS</Link>
                                 <Link to="/mypagecafe" className='my-page-plain'>
                                     <ProfileIcon width={20} height={20} />
                                 </Link>
@@ -46,14 +55,19 @@ const Header = () => {
                         </>
                     ) : (
                         <>
-                            <div className="App-header-Login">
-                                <Link to="/aboutus">ABOUT US</Link>
-                                <Link to="/maincafe">MY DONATIONS</Link>
+                            <div className="App-header-section" style={{ textAlign: 'left' }}>
+                                <Link to="/aboutus">ABOUT BEANYARD</Link>
+                                <Link to="/ourteam">OUR TEAM</Link>
+                                <Link to="/history">OUR HISTORY</Link>
                             </div>
-                            <Link to="/">
-                                <Logo width={60} height={60} />
-                            </Link>
-                            <div className="App-header-right">
+                            <div className="App-header-section">
+                                <Link to="/">
+                                    <Logo width={60} height={60} />
+                                </Link>
+                            </div>
+                            <div className="App-header-section" style={{ textAlign: 'right' }}>
+                                <Link to="/maincafe">DONATE</Link>
+                                <Link to="/mydonation">MY DONATIONS</Link>
                                 <Link to="/mypagecafe" className='my-page-plain'>
                                     <ProfileIcon width={20} height={20} />
                                 </Link>

@@ -9,11 +9,13 @@ const MainCafe = () => {
     return (
         <div className="main-cafe">
             <div className="donation-list">
-                <div style={{ display: 'block', margin: '10% 0' }}>
+                <div style={{ display: 'flex', margin: '8% 0', justifyContent: 'space-evenly' }}>
                     <div className="donate-title-section">
                         <Link to={`/donationbox`}>
-                            <div className="donation-title">FIND</div>
-                            <div className="donation-title">DONATION BOX</div>
+                            <div className="donation-title">
+                                <div>FIND</div>
+                                <div>DONATION BOX</div>
+                            </div>
                             <div className="logo-img">
                                 <Boxthumb />
                             </div>
@@ -22,8 +24,10 @@ const MainCafe = () => {
 
                     <div className="donate-title-section">
                         <Link to={`apply`}>
-                            <div className="donation-title">GO TO</div>
-                            <div className="donation-title">DONATIONS</div>
+                            <div className="donation-title">
+                                <div>GO TO</div>
+                                <div>DONATIONS</div>
+                            </div>
                             <div className="logo-img">
                                 <Donatethumb />
                             </div>

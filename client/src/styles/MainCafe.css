@@ -82,7 +82,12 @@
 .donation-title {
     color: #443826;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 200%;
     font-family: 'ruddy';
-    line-height: 77.22px;
+    line-height: 180%;
+    margin-bottom: 7.5vh;
+}
+
+.donation-title:hover {
+    color: #5EB88A;
 }

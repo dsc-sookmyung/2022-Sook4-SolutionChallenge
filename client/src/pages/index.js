@@ -12,3 +12,5 @@ export { default as Manage} from './ManageComponent';
 export { default as NotFound } from "./NotFound";
 export { default as Privacy } from "./Privacy";
 export { default as Terms } from "./Terms";
+export { default as OurTeam } from "./OurTeam";
+export { default as OurHistory } from "./OurHistory";
