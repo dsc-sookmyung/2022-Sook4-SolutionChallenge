@@ -16,12 +16,6 @@
     font-size: 80%;
 }
 
-.donation-list-contents {
-    overflow-x: scroll;
-    white-space: nowrap;
-    margin: 0 30px 80px 30px;
-}
-
 .cancel-tooltip {
     border-radius: 30px;
     position: relative;
@@ -45,18 +39,6 @@
 
 .cancel-reason {
   font-size: x-small;
-}
-
-.content-section {
-    padding: 20px;
-    text-align: left;
-    font-size: 14px;
-    line-height: 180%;
-    display: inline-block;
-    width: 250px;
-    height: 20vh;
-    border: 2px solid black;
-    margin: 5vh 0 3vh 20px;
 }
 
 .content-link {
@@ -89,12 +71,23 @@
     font-weight: 600;
     color: #443826;
     line-height: 19.23px;
+    font-size: smaller;
+}
+
+.donate-title-section {
+    display: inline-block;
+    margin: 0 6.5%;
 }
 
 .donation-title {
-    margin: 5vh 0 20vh;
     color: #443826;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 200%;
     font-family: 'ruddy';
+    line-height: 180%;
+    margin-bottom: 7.5vh;
+}
+
+.donation-title:hover {
+    color: #5EB88A;
 }

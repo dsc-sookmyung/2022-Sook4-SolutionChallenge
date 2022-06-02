@@ -1,0 +1,25 @@
+.edit-form-section {
+    border: 1px solid #f2f2f2;
+    padding: 3vh 3vw;
+    margin: 5vh 0;
+}
+
+.edit-input {
+    display: inline-block;
+    border: none !important;
+    font-size: 130%;
+    font-weight: 600;
+    color: #f2f2f2;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none;
+}
+
+.edit-input-unit {
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+.react-datetime-picker__inputGroup__input {
+    color: #f2f2f2;
+}

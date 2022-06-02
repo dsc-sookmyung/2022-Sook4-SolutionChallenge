@@ -6,6 +6,7 @@ import {
   Logout,
   SignupCafe,
   CafeDetail,
+  MyDonation,
   MainCafe,
   MyPageCafe,
   CafeApply,
@@ -13,6 +14,8 @@ import {
   Manage,
   Privacy,
   Terms,
+  OurTeam,
+  OurHistory,
   NotFound,
 } from "./pages";
 import {
@@ -89,6 +92,7 @@ function App() {
             <Route path='/logout' element={<Logout />} />
             <Route path='/signup/cafe' element={<SignupCafe />} />
             <Route path='/cafedetail/:postSeq' element={<CafeDetail />} />
+            <Route path='/mydonation/*' element={<MyDonation />} />
             <Route path='/maincafe' element={<MainCafe />} />
             <Route path='/maincafe/apply/*' element={<CafeApply />} />
             <Route path='/mypagecafe' element={<MyPageCafe />} />
@@ -96,6 +100,8 @@ function App() {
             <Route path='/donations/*' element={<Manage />} />
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/terms' element={<Terms />} />
+            <Route path='/ourteam' element={<OurTeam />} />
+            <Route path='/history' element={<OurHistory />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
