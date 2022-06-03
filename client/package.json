@@ -44,5 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.12"
-  }
+  },
+  "proxy": "http://localhost:3000",
+  "homepage": "."
 }
