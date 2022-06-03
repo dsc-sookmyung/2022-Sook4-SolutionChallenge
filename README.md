@@ -27,13 +27,13 @@
     
     - By acting as a middle manager, we are expanding our projects in various directions.
       1) Receiving coffee grounds, Making fertilizers, and Delivering them to farmers.
-      2) Selling Plant kits including fertilizers to make profits.
+      2) Selling Home Gardening kits including fertilizers to make profits.
  
 **2️⃣ Climate Action Trough Funding**
 
     - We started funding to promote Climate Change to people who are not familiar with it.
     
-    - It is to help everyone solve the Greenhouse Gas Problem by selling eco-freindly Plant kits,
+    - It is to help everyone solve the Greenhouse Gas Problem by selling eco-freindly Home Gardening kits,
       including fertilizers made from coffee grounds.
     
     - Funding has the advantage of more convenient distribution of revenue structures,
@@ -53,18 +53,45 @@
 <br><br>
 
 ## 🍉 Whole Process
-(페이지들 보여주면서 설명하기)
-+ 설명하면서 아래 개선점을 같이 얘기해주면 좋을것 같음
-2. UI, UX 개선
+### Home
+
+<img src="https://user-images.githubusercontent.com/68044754/161121241-c9617a8e-7c4b-4afb-8bf4-f1933f9b3138.gif"/>
+
+### Signup & Login
+
+<img src="https://user-images.githubusercontent.com/68044754/161121247-971092ee-2fb2-4828-a19c-0e817c5c1e02.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/161121251-ab34bcd8-2a66-4d88-b7b1-0098f488dc39.png" width="400" height="200" />
+
+### My Donations - Donation process
+
+<img src="https://user-images.githubusercontent.com/68044754/161121199-2b58ce72-5e02-4198-9ff1-6b0aadfbf51a.gif" />
+
+### My Profile
+
+<img src="https://user-images.githubusercontent.com/68044754/161121194-37208977-2eb5-4b50-aa2c-68d51002bd40.gif" />
+
+### [Administor] Donations
+
+The page for administrators to check the donation list and approve or reject donations.
+
+<img src="https://user-images.githubusercontent.com/68044754/161121169-18b6d170-045c-445b-a3aa-1be1d530d890.gif" />
+
+### About Us
+
+<img src="https://user-images.githubusercontent.com/68044754/161121209-2f1a8453-90d0-4b2c-9601-5b8b8cdc70f4.gif"/>
+
+- UI/UX implement
     
-    2-1. UI
+    UI
     
-    - 농장 주인의 UI가 관리자용 페이지 UI로 넘어가게 되었는데, 이 과정에서 커피박 수거 리스트를 한 눈에 보여주고 하나를 클릭하면 지도와 함께 카페의 위치를 알려주는 형식으로 일반적인 접근 방법을 보여주었습니다.
+    - The farm owner's UI was moved to the manager's page UI, which showed a general approach in the form of a coffee grounds collection list at a glance and a map and a cafe location when clicked on one.
     
-    2-2. UX
+    UX
     
-    - 기존 Header에 존재하는 Main 페이지를 My Donations (카페 주인의 경우), Donations (관리자의 겨우) 등 직관적인 키워드로 바꾸어 혼란을 덜어주었습니다.
-    - 기존 Header에 존재하는 About us, How to 페이지의 성격이 겹치는 듯한 느낌이 들고 한번에 확 와닿지 않았는데, About us 페이지만 남겨두고 거기에 우리가 커피박 수거를 통해 이룬 데이터를 보여주는 형식으로 개선했습니다.
+    - The Main page in the existing Header was replaced with intuitive keywords such as ‘My Donations’ for cafe owners and ‘Donations’ for admins to ease confusion.
+    - ‘About us’ and ‘How to’ in the Header seemed to overlap at once, so we improved it by leaving only ‘About us’ to show the data we collected through donations.
+    - It has been improved to be able to return to the previous step when entering information during the donation steps.
+    - At the donation process, it specifies how to pack the coffee grounds, the address where the courier will be sent, and how to process the delivery fee.
 <br><br>
 
 ## 👩‍💻 Tech. Stacks

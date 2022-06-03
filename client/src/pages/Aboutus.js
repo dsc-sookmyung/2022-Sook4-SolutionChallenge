@@ -1,114 +1,114 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { ReactComponent as AboutBGGreen } from '../assets/images/about_bg_green.svg';
-import { ReactComponent as AboutBGBlue } from '../assets/images/about_bg_blue.svg';
-import { ReactComponent as AboutBGYellow } from '../assets/images/about_bg_yellow.svg';
-import { ReactComponent as AboutAsset1 } from '../assets/images/about_asset1.svg';
-import { ReactComponent as AboutAsset11 } from "../assets/images/about_asset_earth.svg";
-import { ReactComponent as AboutAsset2 } from '../assets/images/about_asset2.svg';
-import { ReactComponent as AboutAsset31 } from '../assets/images/about_asset3_1.svg';
-import { ReactComponent as AboutAsset32 } from '../assets/images/about_asset3_2.svg';
-import { ReactComponent as AboutAsset33 } from '../assets/images/about_asset3_3.svg';
+import React from "react";
+import {ReactComponent as BGGreen} from '../assets/images/landing_background_g.svg';
+import {ReactComponent as Part11} from '../assets/images/part1_1.svg';
+import {ReactComponent as Part12} from '../assets/images/part1_2.svg';
+import {ReactComponent as Part13} from '../assets/images/part1_3.svg';
+import {ReactComponent as Part14} from '../assets/images/part1_4.svg';
+import {ReactComponent as Part21} from '../assets/images/part2_1.svg';
+import {ReactComponent as Part22} from '../assets/images/part2_2.svg';
+import {ReactComponent as Part23} from '../assets/images/part2_3.svg';
+import {ReactComponent as Part24} from '../assets/images/part2_4.svg';
 import kitImage from '../assets/images/kitimage.png';
 import aboutAsset44 from '../assets/images/about-asset44.png';
 import aboutAsset41 from '../assets/images/about_asset_41.png';
-import { ReactComponent as GDSCLogo } from '../assets/images/gdsc_logo.svg';
-import imgJihye from '../assets/images/jihye.png';
-import imgMinsun from '../assets/images/minsun.png';
-import imgWoojung from '../assets/images/woojung.png';
-import imgJaein from '../assets/images/jaein.png';
 
 import '../styles/Aboutus.css';
 import ReactPlayer from "react-player";
 
-
 const Aboutus = () => {
-    const [info, setInfo] = useState({
-        coffee: 0,
-        people: 0,
-    });
-    let kit = 10;
-
-    const calcTotalCoffee = (coffee) => {
-        return (coffee/1000).toFixed(1);
-    };
-
-    useEffect(() => {
-        const getPeople = async () => {
-            const config = {
-                headers: {
-                    "Content-type": "application/json",
-                    Accept: "application/json",
-                },
-            };
-            await axios.get(`https://beanyard.app:8080/api/user/count`, config)
-                .then(({ status, data }) => {
-                    setInfo({ ...info, people: data });
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
-        }
-        getPeople();
-    }, [info.people, info]);
-
-    useEffect(() => {
-        const getCoffee = async () => {
-            const config = {
-                headers: {
-                    "Content-type": "application/json",
-                    Accept: "application/json",
-                },
-            };
-            await axios.get('https://beanyard.app:8080/api/donate/all', config)
-                .then(({ status, data }) => {
-                    setInfo({ ...info, coffee: data });
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
-        }
-        getCoffee();
-    }, [info.coffee, info]);
 
     return (
         <div className="about">
-            <div className="about-part1">
-                <AboutBGGreen className="about-bg-green" />
-                <div className="about-people">
-                    <p className="about-people-count">{info.people}</p>
-                    <p className="about-people-ment">people are with us</p>
+            <div className="landing-part1">
+                <div style={{ height: '35vh', margin: '20vh 0 15vh' }}>
+                    <h2 className="landing-part1-title">
+                        We make a better Earth by making <br />
+                        discarded coffee grounds with<br />
+                        eco-friendly fertilizers.
+                    </h2>
                 </div>
-                <AboutAsset11 className="about-people-img"/>
-            </div>
-
-            <div className="about-coffee">
-                <AboutAsset1 className="about-coffee-asset" />
-                <div className="about-coffee-right">
-                    <p className="about-coffee-ment">
-                        The amount of coffee<br />we collected
+                <BGGreen className="landing-bg-green" />
+                <div className="landing-part11">
+                    <Part11 className="landing-part1-img"/>
+                    <p className="landing-part1-ment">
+                        150,000t amount of coffee grounds<br />
+                        thrown away per day.
                     </p>
-                    <div className="about-coffee-count-kg">
-                        <p className="about-coffee-count">{calcTotalCoffee(info.coffee)}</p>
-                        <p className="about-coffee-kg">kg</p>
-                    </div>
+                </div>
+                <div className="landing-part12">
+                    <Part12 className="landing-part1-img" />
+                    <p className="landing-part1-ment">
+                        In a cup of coffee,<br />
+                        only 0.2% coffee beans is used,<br />
+                        the remaining 99.8% is discarded.
+                    </p>
+                </div>
+                <div className="landing-part13">
+                    <Part13 className="landing-part1-img" />
+                    <p className="landing-part1-ment">
+                        Average of Korean's<br />
+                        annual coffee consumption<br />
+                        is 328 cups.
+                    </p>
+                </div>
+                <div className="landing-part14">
+                    <Part14 className="landing-part1-img" />
+                    <p className="landing-part1-ment">
+                        Most of discarded coffee grounds<br />
+                        are landfilled or incinerated
+                    </p>
                 </div>
             </div>
 
-            <div className="about-kit">
-                <AboutBGBlue className="about-bg-blue" />
-                <p className="about-kit-ment">The number of kits we made</p>
-                <p className="about-kit-count">{kit}</p>
-                <AboutAsset2 className="about-kit-asset" />
+            <div className="landing-part2">
+                <h2 className="landing-part2-title">
+                    Why should we use<br />
+                    coffee fertilizer?
+                </h2>
+                <div className="landing-part21">
+                    <Part21 className="landing-part2-img" />
+                    <p className="landing-part2-ment">
+                    <p className="landing-part2-ment-title">1. Economic Value</p><br/>
+                    Do you know that it costs about
+                    12.8 billion won to dispose of
+                    coffee beans per year?
+                    Recycling coffee beans as 
+                    fertilizer can reduce processing
+                    costs.
+                    </p>
+                </div>
+                <div className="landing-part22">
+                    <Part22 className="landing-part2-img" />
+                    <p className="landing-part2-ment">
+                        <p className="landing-part2-ment-title">2. Environmental Value</p><br/>
+                        Not only can it reduce the cost of disposing of coffee beans,
+                        but it can also reduce the amount of CO2 generated from landfilling and incineration.
+                    </p>
+                </div>
+                <div className="landing-part23">
+                    <Part23 className="landing-part2-img" />
+                    <p className="landing-part2-ment">
+                        <p className="landing-part2-ment-title">3. Future Value</p><br/>
+                        By recycling coffee beans, we create new uses of
+                        coffee beans, and inform the world of the 
+                        importance of the environment and the value of a virtuous cycle.
+                    </p>
+                </div>
+                <div className="landing-part24">
+                    <Part24 className="landing-part2-img" />
+                    <p className="landing-part2-ment">
+                    <p className="landing-part2-ment-title">4. Value as Fertilizer</p><br/>
+                        Since it is an eco-friendly fertilizer not a chemical fertilizer,
+                        we can use it with confidence.
+                        It is rich in nutrients, so crops grow well.
+                    </p>
+                </div>
             </div>
 
             <div className="about-process">
                 <p className="about-pc-title">
-                    The process of making coffee fertilizer kits
+                    The process of making Home Gardening kits
                 </p>
-                <AboutAsset31 className="about-pc-asset1" />
-                <AboutAsset32 className="about-pc-asset2" />
-                <AboutAsset33 className="about-pc-asset3" />
             </div>
             <div className="about-pc-contents">
                 <div className="about-pc-row">
@@ -162,42 +162,10 @@ const Aboutus = () => {
                     <p className="about-pc-ment">
                         5. This well-made fertilizer is made into a kit with soil, pots and seeds. And then provided to you through funding.
                         <a href={"https://www.ycrowdy.com/r/gdscbeanyard"} target="_blank" rel="noopener noreferrer">
-                            <p>Go to funding page and get BeanYard Kit!</p>
+                            <p>Go to funding page and get Home Gardening Kit!</p>
                         </a>
                     </p>
                 </div>
-            </div>
-
-            <div className="about-we">
-                <AboutBGYellow className="about-bg-yellow" />
-                <p className="about-we-title">
-                    The people who made the BEANYARD
-                </p>
-                <div className="about-we-content" id="about-we-jh">
-                    <img className="about-we-photo" src={imgJihye} alt="" />
-                    <p className="about-we-name">Jihye Kim</p>
-                    <p className="about-we-job">Leader <br />BackEnd &amp; Server Developer </p>
-                </div>
-                <div className="about-we-content" id="about-we-ms">
-                    <img className="about-we-photo" src={imgMinsun} alt="" />
-                    <p className="about-we-name">Minsun Kim</p>
-                    <p className="about-we-job">Frontend Developer </p>
-                </div>
-                <div className="about-we-content" id="about-we-ji">
-                    <img className="about-we-photo" src={imgJaein} alt="" />
-                    <p className="about-we-name">Jaein Lee</p>
-                    <p className="about-we-job">Designer</p>
-                </div>
-                <div className="about-we-content" id="about-we-wj">
-                    <img className="about-we-photo" src={imgWoojung} alt="" />
-                    <p className="about-we-name">Woojung Jeon</p>
-                    <p className="about-we-job">Frontend Developer </p>
-                </div>
-            </div>
-
-            <div>
-                <p className="about-gdsc-with">with</p>
-                <GDSCLogo className="about-gdsc-logo" />
             </div>
         </div>
     );

@@ -31,7 +31,7 @@
   text-decoration: none;
   margin: 0;
   color: #443826;
-  font-size: 16px;
+  font-size: 90%;
   padding: 0 10px;
 }
 
@@ -43,10 +43,10 @@ a {
   color:#5EB88A;
 }
 
-.App-header-right {
-  vertical-align: middle;
-  display: flex;
-  align-items: center;
+.App-header-section {
+  flex: 1;
+  width: 30%;
+  box-sizing: border-box;
 }
 
 @keyframes App-logo-spin {

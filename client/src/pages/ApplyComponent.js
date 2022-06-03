@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { 
     CafeApply,
-    CoffeeGrounds,
     CollectMethod,
+    DonateMethod,
     Result,
   } from "./CafeApplyPages";
 import { Routes, Route } from "react-router-dom";
@@ -11,8 +11,6 @@ import { getApi, postApi } from "../api";
 import dayjs from "dayjs";
 import { AuthContext } from "../App";
 import { useNavigate, useLocation } from "react-router-dom";
-import {ReactComponent as DonateBack1} from '../assets/donateBackgrounds/DonateBack1.svg';
-import {ReactComponent as DonateBack2} from '../assets/donateBackgrounds/DonateBack2.svg';
 import {ReactComponent as DonateBack3} from '../assets/donateBackgrounds/DonateBack3.svg';
 import {ReactComponent as DonateBack4} from '../assets/donateBackgrounds/DonateBack4.svg';
 
@@ -27,17 +25,19 @@ const ApplyComponent = () => {
         amount: null,
         userSeq: authContext.state.userSeq,
         donateType: '',
+        donateCycle: '',
         message: '',
         donateStatus: 'WAIT',
         createdAt: '',
+        weeks: [],
     };
+
     const [donateForm, setDonateForm] = useState(init);
     const navigate = useNavigate();
     const currentPath = useLocation().pathname.split('/')[3];
 
     useEffect(() => {
         const getCafeProfile = async () => {
-                // { userName: 'test@test.com' },
             await getApi(
                 { userName: authContext.state.email },
                 '/api/user',
@@ -66,6 +66,7 @@ const ApplyComponent = () => {
         let tmp = donateForm;
         tmp.createdAt = dayjs(Date.now()).format('YYYY-MM-DD HH:mm:ss');
         setDonateForm(tmp);
+        console.log(donateForm)
 
         await postApi(
             donateForm,
@@ -84,7 +85,7 @@ const ApplyComponent = () => {
         });
     };
 
-    const setMapInfo = (df, mk, page) => {
+    const setMapInfo = (df, mk, cs, days, page) => {
         const cafeName = df.cafeName.value;
         const locationName = df.locationName.value;
         const time = dayjs(df.dateTime.value).format('YYYY-MM-DD HH:MM:ss');
@@ -92,9 +93,12 @@ const ApplyComponent = () => {
         let tmp = donateForm;
         tmp.cafeName = cafeName;
         tmp.locateName = locationName;
-        tmp.lon = mk[0].loc.lat();
-        tmp.lat = mk[0].loc.lng();
+        if(mk.length) {
+            tmp.lon = mk[0].loc.lat();
+            tmp.lat = mk[0].loc.lng();
+        }
         tmp.time = time;
+        tmp.weeks = days;
 
         if(page === 'next') {
             if(!mk.length && !donateForm.lon && !donateForm.lat) {
@@ -107,9 +111,10 @@ const ApplyComponent = () => {
                 return;
             }
             setDonateForm(tmp);
-
-            navigate('ground');
-        } else navigate('');
+            setCoffeeSizeInfo(cs, page);
+        } else {
+            navigate('method');
+        }
     };
 
     const setCoffeeSizeInfo = (cs, page) => {
@@ -125,7 +130,22 @@ const ApplyComponent = () => {
             }
             postCafeApply();
         }
-        else navigate('info')
+        else navigate('method')
+    };
+
+    const setDonateMethodInfo = (method, page) => {
+        if(page === 'next') {
+            if(method === '') {
+                alert('Choose your donate cycle.');
+                return;
+            }
+    
+            let tmp = donateForm;
+            tmp.donateCycle = method;
+            setDonateForm(tmp);
+            console.log(donateForm)
+            navigate('method');
+        } else navigate('/maincafe');
     };
 
     const setMethodInfo = (method, page) => {
@@ -138,9 +158,8 @@ const ApplyComponent = () => {
             let tmp = donateForm;
             tmp.donateType = method;
             setDonateForm(tmp);
-
             navigate('info');
-        } else navigate('/maincafe');
+        } else navigate('/maincafe/apply');
     };
 
     const initPage = () => {
@@ -151,20 +170,16 @@ const ApplyComponent = () => {
     return (
         <div>
             {
-                currentPath === 'result' ?
+                currentPath === 'result' &&
                 <>
                     <DonateBack3 className="donate-back3" />
                     <DonateBack4 className="donate-back4" />
-                </> :
-                <>
-                    <DonateBack1 className="donate-back1" />
-                    <DonateBack2 className="donate-back2" />
                 </>
             }
             <Routes>
-                <Route path='/' exact={true} element={<CollectMethod method={donateForm.donateType} setMethodInformation={setMethodInfo} />} />
-                <Route path="/info" element={<CafeApply mapIf={donateForm} setMapInformation={setMapInfo} />} />
-                <Route path='/ground' element={<CoffeeGrounds defaultCoffeeSize={donateForm.amount} setCoffeeSizeInformation={setCoffeeSizeInfo} />} />
+                <Route path='/' exact={true} element={<DonateMethod dMethod={donateForm.donateCycle} setDonateMethodInformation={setDonateMethodInfo} />} />
+                <Route path='/method' exact={true} element={<CollectMethod method={donateForm.donateType} setMethodInformation={setMethodInfo} />} />
+                <Route path="/info" element={<CafeApply mapIf={donateForm} setMapInformation={setMapInfo} defaultCoffeeSize={donateForm.amount} />} />
                 <Route path='/result' element={<Result form={donateForm} initPage={initPage} />} />
             </Routes>
         </div>

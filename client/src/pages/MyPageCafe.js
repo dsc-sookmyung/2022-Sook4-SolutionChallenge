@@ -169,7 +169,7 @@ const MyPageCafe = () => {
             </div>
             <div className="reward-notice">
                 <div>For those who collect all the vegetable characters in the basket,</div>
-                <div>we will send you BeanYard kit as a reward!</div>
+                <div>we will send you Home Gardening kit as a reward!</div>
             </div>
             <div>
                 <div className="coffee-grounds-info-section">
