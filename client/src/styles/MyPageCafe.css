@@ -47,7 +47,9 @@
 .coffee-grounds-char {
     position: absolute;
     right: 5vw;
-    top: 25vh;
+    top: 45vh;
+    /* bottom: -10vh; */
+    z-index: 10;
 }
 
 .chars {

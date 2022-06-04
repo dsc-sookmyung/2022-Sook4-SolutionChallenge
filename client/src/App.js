@@ -16,6 +16,7 @@ import {
   Terms,
   OurTeam,
   OurHistory,
+  DonationBox,
   NotFound,
 } from "./pages";
 import {
@@ -101,7 +102,8 @@ function App() {
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/terms' element={<Terms />} />
             <Route path='/ourteam' element={<OurTeam />} />
-            <Route path='/history' element={<OurHistory />} />
+            <Route path='/history' element={<OurHistory />} /> 
+            <Route path='/donationbox' element={<DonationBox />} /> 
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>

@@ -3,13 +3,18 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { AuthContext } from "../App";
 import { getApi, putApi } from "../api";
 import '../styles/MyPageCafe.css';
-import {ReactComponent as Rewards1} from '../assets/rewards/reward1.svg';
-import {ReactComponent as Rewards2} from '../assets/rewards/reward2.svg';
-import {ReactComponent as Rewards3} from '../assets/rewards/reward3.svg';
-import {ReactComponent as Rewards4} from '../assets/rewards/reward4.svg';
-import {ReactComponent as Rewards5} from '../assets/rewards/reward5.svg';
-import {ReactComponent as Rewards6} from '../assets/rewards/reward6.svg';
-import {ReactComponent as Basket} from '../assets/baguni.svg';
+// import {ReactComponent as Rewards1} from '../assets/rewards/reward1.svg';
+// import {ReactComponent as Rewards2} from '../assets/rewards/reward2.svg';
+// import {ReactComponent as Rewards3} from '../assets/rewards/reward3.svg';
+// import {ReactComponent as Rewards4} from '../assets/rewards/reward4.svg';
+// import {ReactComponent as Rewards5} from '../assets/rewards/reward5.svg';
+// import {ReactComponent as Rewards6} from '../assets/rewards/reward6.svg';
+// import {ReactComponent as Basket} from '../assets/baguni.svg';
+import {ReactComponent as RewardsNew1} from '../assets/rewards/reward_new1.svg';
+import {ReactComponent as RewardsNew2} from '../assets/rewards/reward_new2.svg';
+import {ReactComponent as RewardsNew3} from '../assets/rewards/reward_new3.svg';
+import {ReactComponent as RewardsNew4} from '../assets/rewards/reward_new4.svg';
+import {ReactComponent as RewardsNew5} from '../assets/rewards/reward_new5.svg';
 
 const MyPageCafe = () => {
     const authContext = useContext(AuthContext);
@@ -147,13 +152,12 @@ const MyPageCafe = () => {
     };
 
     const showRewards = () => {
-        if(totalCoffee > 0 && totalCoffee < 10) return <Rewards1 width={'35vw'} height={'60vh'} />;
-        else if(totalCoffee > 10 && totalCoffee < 20) return <Rewards2 width={'35vw'} height={'60vh'} />;
-        else if(totalCoffee > 20 && totalCoffee < 50) return <Rewards3 width={'35vw'} height={'60vh'} />;
-        else if(totalCoffee > 50 && totalCoffee < 70) return <Rewards4 width={'35vw'} height={'60vh'} />;
-        else if(totalCoffee > 70 && totalCoffee < 100) return <Rewards5 width={'35vw'} height={'60vh'} />;
-        else if(totalCoffee > 100) return <Rewards6 width={'35vw'} height={'60vh'} />;
-        else return <Basket width={'35vw'} height={'60vh'} style={{ marginTop: '10vh' }}/>;
+        if(totalCoffee > 0 && totalCoffee < 10) return <RewardsNew1 width={'40vw'} height={'70vh'}/>;
+        else if(totalCoffee >= 10 && totalCoffee < 30) return <RewardsNew2 width={'40vw'} height={'70vh'} />;
+        else if(totalCoffee >= 30 && totalCoffee < 50) return <RewardsNew3 width={'40vw'} height={'70vh'} />;
+        else if(totalCoffee >= 50 && totalCoffee < 100) return <RewardsNew4 width={'40vw'} height={'70vh'} />;
+        else if(totalCoffee >= 100) return <RewardsNew5 width={'40vw'} height={'70vh'} />;
+        else return <RewardsNew1 width={'40vw'} height={'70vh'} style={{ marginTop: '10vh' }}/>;
     };
 
     const setRewardsStyle = () => {
