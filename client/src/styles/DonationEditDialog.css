@@ -21,5 +21,9 @@
 }
 
 .react-datetime-picker__inputGroup__input {
-    color: #f2f2f2;
+    color: #f2f2f2 !important;
+}
+
+.react-datetime-picker__inputGroup input, .react-datetime-picker__inputGroup span {
+    color: #f2f2f2 !important;
 }

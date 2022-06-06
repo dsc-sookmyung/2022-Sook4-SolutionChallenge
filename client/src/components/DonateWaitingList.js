@@ -133,8 +133,8 @@ const DonateWaitingList = ({ list, now }) => {
                     list.map((e, idx) => {
                         return (
                             <div className='table-section' key={idx}>
-                                { e.donateCycle && <div style={{ margin: '0', width: '1px'}} className="table-content">📆</div> }
-                                <div style={{ margin: '0 2.5vw', width: '9%' }} className="table-content"><span>{ date(e.time) }</span></div>
+                                { e.donateCycle && <div style={{ margin: '0', width: '1px'}} className="table-content">{ e.donateCycle === 'SHORT' ? '' : '📆'}</div> }
+                                <div style={{ margin: '0 2.5vw', width: '9%' }} className="table-content"><span>{ e.time ? date(e.time) : '-' }</span></div>
                                 <div style={{ margin: '0 4vw', width: '5%' }} className="table-content"><span>{ e.cafeName ? e.cafeName : '-' }</span></div>
                                 <div style={{ margin: '0 2vw', width: '16%' }} className="table-content"><span>{ e.locateName ? e.locateName : '-' }</span></div>
                                 <div style={{ margin: '0 3vw', width: '2%' }} className="table-content"><span>{ e.amount }kg</span></div>

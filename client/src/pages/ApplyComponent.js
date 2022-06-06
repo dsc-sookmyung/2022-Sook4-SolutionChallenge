@@ -29,7 +29,7 @@ const ApplyComponent = () => {
         message: '',
         donateStatus: 'WAIT',
         createdAt: '',
-        weeks: [],
+        weekTypes: [],
     };
 
     const [donateForm, setDonateForm] = useState(init);
@@ -98,7 +98,7 @@ const ApplyComponent = () => {
             tmp.lat = mk[0].loc.lng();
         }
         tmp.time = time;
-        tmp.weeks = days;
+        tmp.weekTypes = days;
 
         if(page === 'next') {
             if(!mk.length && !donateForm.lon && !donateForm.lat) {

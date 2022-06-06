@@ -1,58 +1,97 @@
 import React, { useState, useContext, useEffect } from "react";
 import '../../styles/MainCafe.css';
 import { AuthContext } from "../../App";
-import { getApi } from "../../api";
+import { getApi, deleteApi } from "../../api";
 import dayjs from 'dayjs';
+import {ReactComponent as EditBtn} from '../../assets/EditBtn.svg';
+import {ReactComponent as DelBtn} from '../../assets/DelBtn.svg';
+import { DonationEditDialog } from "../../components/dialog";
+import axios from 'axios';
 
-const RegularDonations = () => {
+const RegularDonations = (type) => {
     const authContext = useContext(AuthContext);
-    const [date, setDate] = useState(dayjs(new Date()).format('YYYY. MM. DD'));
-    const [time, setTime] = useState(dayjs(new Date()).format('HH:MM'));
-
     const [info, setInfo] = useState([]);
+    const [editVisible, setEditVisible] = useState(false);
+    const [curInfo, setCurInfo] = useState({});
 
-    useEffect(() => {        
-        const getDonationsList = async () => {
-            if(authContext.state.userSeq) {
-                await getApi(
-                    {
-                        userSeq: authContext.state.userSeq,
-                    },
-                    "/api/donate",
+    const getDonationsList = async () => {
+        if(authContext.state.userSeq) {
+            await getApi(
+                {
+                    userSeq: authContext.state.userSeq,
+                    donateCycleList: "LONG,DEFAULT",
+                },
+                "/api/donate",
+                authContext.state.token
+            )
+            .then(({ data }) => {
+                console.log(data)
+                if(data) {
+                    if(data.content.length) {
+                        setInfo(data.content);
+                    }
+                }
+            })
+            .catch((e) => {
+                console.log(e);
+            });
+        }
+    };
+
+    const putMyDonation = async (data) => {
+        console.log(data)
+        await axios.put('https://beanyard.app:8080/api/donate',
+            data,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: "application/json",
+                }
+            })
+            .then(({ status }) => {
+                if(status === 200) {
+                    alert('Edit completed.');
+                    getDonationsList();
+                } else {
+                    alert('Edit failed. Try again.');
+                }
+                setEditVisible(false);
+                document.body.style.overflow = 'auto';
+            })
+            .catch((e) => {
+                console.log(e);
+            });
+    };
+
+        const DeleteDonation = async (seq) => {
+        if(authContext.state.userSeq) {
+            let answer = window.confirm('Are you sure?');
+            if(answer) {
+                await deleteApi(
+                    {},
+                    `/api/donate/${seq}`,
                     authContext.state.token
                 )
-                .then(({ data }) => {
-                    if(data) {
-                        setInfo(data.content);
-                        setDate(dayjs(data.content.time).format('YYYY. MM. DD'));
-                        setTime(dayjs(data.content.time).format('HH:MM'));
+                .then(({ status }) => {
+                    if(status === 200) {
+                        alert('Delete completed.');
+                        getDonationsList();
+                    } else {
+                        alert('Delete failed. Try again.');
                     }
                 })
                 .catch((e) => {
                     console.log(e);
                 });
             }
-        };
-        setInfo([{
-            donateSeq: 23,
-            time: "2021. 02. 02 16:39:22",
-            amount: 100,
-            message: "메세지",
-            lat: 12.0,
-            lon: 12.0,
-            locateName: "카페위치",
-            cafeName: "지혜카페",
-            donateStatus: "WAIT",
-            donateType: "POST",
-            donateCycl: "SHORT",
-            userSeq:1,
-            createdAt: "2022-05-29 01:41:35",
-            weeks: ["SUNDAY", "FRIDAY"]
-        }]);
-        setDate(dayjs("2021. 02. 02 16:39:22").format('YYYY. MM. DD'));
-        setTime(dayjs("2021. 02. 02 16:39:22").format('HH:MM'));
+
+        }
+    };
+
+    useEffect(() => {
         getDonationsList();
-    }, [date, authContext.state.token, authContext.state.userSeq]);
+        // getDonationsList("LONG");
+    }, [authContext.state.token, authContext.state.userSeq]);
 
     const setStatus = (status) => {
         if(status === 'COMPLETE') return 'Donate Completed';
@@ -71,6 +110,28 @@ const RegularDonations = () => {
         else return 'Delivery';
     };
 
+    const SetDonationInfo = (index) => {
+        setCurInfo(info[index]);
+        setEditVisible(true);
+    };
+
+    const setDate = (date) => {
+        return dayjs(date).format('YYYY. MM. DD');
+
+    };
+
+    const setTime = (time) => {
+        return dayjs(time).format('HH:MM');
+    };
+
+        const closeMapDialog = (e, click, now) => {
+        if(click === 'inside' || (e.target.id === 'dialog-outside' && editVisible)) {
+            setEditVisible(false);
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+
     return (
         <div className="main-cafe">
             <div className="donation-list">
@@ -81,7 +142,7 @@ const RegularDonations = () => {
                                 return (
                                     <div className="content-section" key={idx}>
                                         <div className="date-and-pick">
-                                            <div className="date-section">📆 { date }</div>
+                                            <div className="date-section">📆 { setDate(e.time) }</div>
                                             <div className="pick-section">
                                                 <span
                                                     className="pick-title"
@@ -95,9 +156,27 @@ const RegularDonations = () => {
                                                 </span>
                                             </div>
                                         </div>
-                                        <div>Donate Type: <span>{ method(e.donateType) }</span></div>
-                                        <div>Quantity: <span>{ e.amount } g</span></div>
-                                        <div>Time: <span>{ time }</span></div>
+                                        <div>
+                                            <div style={{display: 'inline-block', width: '70%'}}>
+                                                <div>Donate Type: <span>{ method(e.donateType) }</span></div>
+                                                <div>Quantity: <span>{ e.amount } g</span></div>
+                                                <div>Time: <span>{ setTime(e.time) }</span></div>
+                                            </div>
+                                            <div style={{display: 'inline-block', width: '30%', textAlign: 'right'}}>
+                                                <EditBtn
+                                                    width={'17.5%'}
+                                                    height={'17.5%'}
+                                                    style={{margin: '0 1vw'}}
+                                                    onClick={()=>SetDonationInfo(idx)}
+                                                />
+                                                <DelBtn
+                                                    width={'17.5%'}
+                                                    height={'17.5%'}
+                                                    style={{margin: '0 1vw'}}
+                                                    onClick={()=>DeleteDonation(e.donateSeq)}
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 );
                             }) :
@@ -108,6 +187,12 @@ const RegularDonations = () => {
                     }
                 </div>
             </div>
+            <DonationEditDialog
+                isVisible={editVisible}
+                curInfo={curInfo}
+                putDonation={putMyDonation}
+                closeDialog={closeMapDialog}
+            />
         </div>
     );
 };
