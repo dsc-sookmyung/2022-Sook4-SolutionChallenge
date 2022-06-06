@@ -5,28 +5,8 @@ import { getApi } from '../../api';
 
 /* 각각 waiting list, completed list 에서는 클릭했을 때 들어오는 api에 따라 달라지도록만 한다 */
 
-const dumpdata = [
-    {
-        "donateSeq": 23,
-        "time": null,
-        "amount": 100,
-        "message": "메세지",
-        "lat": 12.0,
-        "lon": 12.0,
-        "locateName": "카페위치",
-        "cafeName": "지혜카페",
-        "donateStatus": "WAIT",
-        "donateType": "POST",
-        "donateCycle": "SHORT",
-        "userSeq": 1,
-        "createdAt": "2022-05-29 01:41:35",
-        "weeks": ["SUNDAY", "FRIDAY"]
-    }
-]
-
 const WaitingList = () => {
     const [componentList, setComponentList] = useState([]);
-    // const [componentList, setComponentList] = useState(dumpdata);
 
     const [curService, setCurService] = useState('delivery');
     const authContext = useContext(AuthContext);
@@ -43,6 +23,7 @@ const WaitingList = () => {
                 authContext.state.token
             )
             .then(({ data }) => {
+                console.log(data)
                 setComponentList([]);
                 if(data) setComponentList(data.content);
             })

@@ -55,6 +55,7 @@
 .react-datetime-picker {
     text-align: right;
     display: inline-block;
+    background-color: #F2F2F2;
 }
 
 .react-datetime-picker__wrapper, .react-datetime-picker__inputGroup {
@@ -62,7 +63,10 @@
     border: none !important;
     border-bottom: 1px solid white;
     width: 100% !important;
-    color: #F2F2F2;
+}
+
+.react-datetime-picker__inputGroup input {
+    color: #443826 !important;
 }
 
 .react-datetime-picker__wrapper > input, .react-datetime-picker__wrapper > textarea,
@@ -71,7 +75,6 @@
 }
 
 .react-datetime-picker__inputGroup__amPm {
-    color: #F2F2F2;
     background: #443826 !important;
 }
 

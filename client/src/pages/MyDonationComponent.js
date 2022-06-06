@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Link, Navigate, useLocation } from "react-router-dom";
 import { Donations, RegularDonations } from './MyDonationPages';
-import { DonationEditDialog } from '../components/dialog';
+
 import '../styles/MyDonationComponent.css';
 
 const MyDonation = () => {

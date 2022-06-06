@@ -49,7 +49,7 @@ const SignupFormCafe = () => {
                 },
             };
             await axios.post(
-                "http://27.96.134.100:8080/api/auth/email",
+                "https://beanyard.app:8080/api/auth/email",
                 JSON.parse(temp),
                 config
             )
@@ -104,18 +104,19 @@ const SignupFormCafe = () => {
         } else if (!details.email || !details.password) {  // username, password 기입 확인
             setLastMsg("Please fill in USER NAME and PASSWORD.");
         } else {
-            // console.log(details.locationName);
+            let par = {
+                email: details.email,
+                password: details.password,
+                userName: details.userName,
+                lat: lat,
+                lon: lon,
+                cafeName: details.cafeName,
+                locateName: locateName,
+            };
+            console.log(par);
             await axios.post(
-                "http://beanyard.shop:8080/api/auth/register",
-                {
-                    email: details.email,
-                    password: details.password,
-                    userName: details.userName,
-                    lat: lat,
-                    lon: lon,
-                    cafeName: details.cafeName,
-                    locateName: locateName,
-                },
+                "https://beanyard.app:8080/api/auth/register",
+                par,
                 config
             )
                 .then(({ status, data }) => {

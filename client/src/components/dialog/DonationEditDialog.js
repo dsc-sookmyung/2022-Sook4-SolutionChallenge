@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/DonationEditDialog.css';
 import DateTimePicker from 'react-datetime-picker';
+import dayjs from 'dayjs';
 
 const DonationEditDialog = ({ isVisible, closeDialog, curInfo, putDonation }) => {
     const [collectMethod, setCollectMethod] = useState('');
@@ -13,7 +14,7 @@ const DonationEditDialog = ({ isVisible, closeDialog, curInfo, putDonation }) =>
             setCollectMethod('DELIVERY');
         } else if(curInfo.donateType === 'DIRECT' && curInfo.donateCycle === 'SHORT') {
             setCollectMethod('PICK UP');
-        } else if(curInfo.donateCycle === 'LONG') {
+        } else if(curInfo.donateCycle === 'LONG' || curInfo.donateCycle === 'DEFAULT') {
             setCollectMethod('REGULAR DONATION');
         }
 
@@ -60,11 +61,11 @@ const DonationEditDialog = ({ isVisible, closeDialog, curInfo, putDonation }) =>
                     <input
                         type="text"
                         value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
+                        onChange={(e) =>setQuantity(e.target.value)}
                         className="edit-input"
                         style={{ textAlign: 'right', width: '35%' }}
                     />
-                    <span className="edit-input-unit">KG</span>
+                    <span className="edit-input-unit">G</span>
                 </div>
 
                 <div className="edit-form-section" style={{ display: collectMethod === 'DELIVERY' ? 'none' : 'block', padding: '4vh 3vw' }}>
@@ -152,7 +153,14 @@ const DonationEditDialog = ({ isVisible, closeDialog, curInfo, putDonation }) =>
                 <div
                     className='table-check-btn dialog-btn map-dialog'
                     style={{ color: '#443826', backgroundColor: '#F2F2F2' }}
-                    onClick={() => putDonation(curInfo, "COMPLETE")}
+                    onClick={() => 
+                        putDonation({
+                            donateSeq: curInfo.donateSeq,
+                            amount: quantity,
+                            time: dayjs(value).format("YYYY-MM-DD HH:MM:ss"),
+                            weeks: week,
+                        })
+                    }
                 >SUBMIT</div>
             </div>
         </div>

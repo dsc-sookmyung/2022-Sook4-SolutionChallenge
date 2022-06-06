@@ -38,7 +38,7 @@ const DonationBox = () => {
             });
           });
         } else {
-          window.alert("현재 위치를 알수 없습니다.");
+          window.alert("Cannot find current location.");
         }
       }, []);
 
@@ -66,7 +66,7 @@ const DonationBox = () => {
 
     return (
         <div>
-            <div style={{fontSize: '40px', fontFamily: 'ruddy', margin: '30px 0'}}>
+            <div style={{fontSize: '40px', fontFamily: 'ruddy', margin: '30px 0', color: '#443826' }}>
                 DONATION BOX
             </div>
             <div style={{height: '100vh'}}>
