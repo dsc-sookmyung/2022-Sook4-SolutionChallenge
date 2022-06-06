@@ -5,26 +5,9 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import mapCurIcon from '../assets/images/mapCurIcon.svg';
 import mapBoxIcon from '../assets/images/mapBoxIcon.svg';
 
-
-const dumpdata = [
-    {
-        "basketSeq": 1,
-        "lat": 1.0,
-        "lon": 1.0,
-        "locateName": "위치"
-    },
-    {
-        "basketSeq": 2,
-        "lat": 2.0,
-        "lon": 0.0,
-        "locateName": "위치2"
-    }
-];
-
 const DonationBox = () => {
     const authContext = useContext(AuthContext);
-    // const [boxList, setBoxList] = useState([]);
-    const [boxList, setBoxList] = useState(dumpdata);
+    const [boxList, setBoxList] = useState([]);
     const [curLocation, setCurLoation] = useState({
         lat: 0.0, lng: 0.0
     });
@@ -55,14 +38,15 @@ const DonationBox = () => {
                 authContext.state.token
             )
             .then(({ data }) => {
+                console.log(data)
                 setBoxList(data);
             })
             .catch((e) => {
                 console.log(e);
             });
         }
-        // getBox();
-    }, [])
+        getBox();
+    }, [authContext.state.token])
 
     return (
         <div>
