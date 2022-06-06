@@ -14,12 +14,12 @@ const RegularDonations = (type) => {
     const [editVisible, setEditVisible] = useState(false);
     const [curInfo, setCurInfo] = useState({});
 
-    const getDonationsList = async (type) => {
+    const getDonationsList = async () => {
         if(authContext.state.userSeq) {
             await getApi(
                 {
                     userSeq: authContext.state.userSeq,
-                    donateCycle: type,
+                    donateCycleList: "LONG,DEFAULT",
                 },
                 "/api/donate",
                 authContext.state.token
@@ -28,13 +28,7 @@ const RegularDonations = (type) => {
                 console.log(data)
                 if(data) {
                     if(data.content.length) {
-                        let tmp = info;
-                        for(let i=0;i<data.content.length;i++) {
-                            if(!info.filter((e) => e.donateSeq === data.content[i].donateSeq).length) {
-                                tmp.push(data.content[i]);
-                            }
-                        }
-                        setInfo(tmp);
+                        setInfo(data.content);
                     }
                 }
             })
@@ -57,9 +51,7 @@ const RegularDonations = (type) => {
             .then(({ status }) => {
                 if(status === 200) {
                     alert('Edit completed.');
-                    info.splice(info.findIndex((e) => e.donateSeq === data.donateSeq), 1);
-                    getDonationsList("LONG");
-                    getDonationsList("DEFAULT");
+                    getDonationsList();
                 } else {
                     alert('Edit failed. Try again.');
                 }
@@ -82,8 +74,8 @@ const RegularDonations = (type) => {
                 )
                 .then(({ status }) => {
                     if(status === 200) {
-                        getDonationsList("LONG");
-                        getDonationsList("DEFAULT");
+                        alert('Delete completed.');
+                        getDonationsList();
                     } else {
                         alert('Delete failed. Try again.');
                     }
@@ -97,8 +89,8 @@ const RegularDonations = (type) => {
     };
 
     useEffect(() => {
-        getDonationsList("DEFAULT");
-        getDonationsList("LONG");
+        getDonationsList();
+        // getDonationsList("LONG");
     }, [authContext.state.token, authContext.state.userSeq]);
 
     const setStatus = (status) => {

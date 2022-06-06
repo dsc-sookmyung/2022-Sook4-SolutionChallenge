@@ -19,7 +19,7 @@ const Donations = () => {
             await getApi(
                 {
                     userSeq: authContext.state.userSeq,
-                    donateCycle: "SHORT"
+                    donateCycleList: "SHORT"
                 },
                 "/api/donate",
                 authContext.state.token
