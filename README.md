@@ -52,19 +52,25 @@
       After confirming, everyone will have a desire to participate.
 <br><br>
 
-## ✨ top50: We developed the project as below … **
+## ✨ top 50: We developed the project as below …
 
     1. Regular Donation System
-    - Regular donations are available as well as one-time donations. When a user selects a regular donation, the donations are automatically generated for each selected period.
+    - Regular donations are available as well as one-time donations. 
+    - When a user selects a regular donation, the donations are automatically generated for each selected period.
+    
     2. Donation Box for Coffee Grounds Collection
-    - we created a Donation Box page that shows the user the location of the nearby Collection Box. This is a collection method that is more accessible to the user, and more active coffee grounds collection can be achieved. 
+    - we created a Donation Box page that shows the user the location of the nearby Collection Box.
+    
     3. Make Rewards Intuitive
     - Rewards was modified growing sprouts, not crops, to make users feel intuitively.
+    
     4. Changing Landing Page, Navigation Bar
-    - To clearly show the purpose and direction of the service, we included the service process on the landing page and reorganized the top navigation bar to increase the readability and usability of the service introduction.
+    - To clearly show the purpose and direction of the service, we included the service process on the landing page
+    - We also reorganized the top navigation bar and each contents to increase the readability and usability.
+    
     5. Objective indicators through research
-    - According to an experiment in the paper, it was observed that coffee grounds fertilizer had more than four times the growth of plants than normal fertilizer.
-    - Through this, it was confirmed that the fertilizer made from coffee grounds is sufficiently valuable as a fertilizer and is still in use.
+    - It was observed that coffee grounds fertilizer had more than four times the growth of plants than normal fertilizer.
+    - The fertilizer made from coffee grounds is sufficiently valuable as a fertilizer and is still in use.
 
 
 
