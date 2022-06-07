@@ -76,32 +76,57 @@
 
 
 ## 🍉 Whole Process
-### Home
+### Landing Page
 
-<img src="https://user-images.githubusercontent.com/68044754/161121241-c9617a8e-7c4b-4afb-8bf4-f1933f9b3138.gif"/>
+<img src="https://user-images.githubusercontent.com/68044754/172446163-11ef6557-d2a6-4d02-8dbc-731f23d6479c.gif"  width="700" height="400"/> 
+
 
 ### Signup & Login
 
-<img src="https://user-images.githubusercontent.com/68044754/161121247-971092ee-2fb2-4828-a19c-0e817c5c1e02.png" width="400" height="200" />
-<img src="https://user-images.githubusercontent.com/68044754/161121251-ab34bcd8-2a66-4d88-b7b1-0098f488dc39.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/161121247-971092ee-2fb2-4828-a19c-0e817c5c1e02.png" width="700" height="400" />
+<img src="https://user-images.githubusercontent.com/68044754/161121251-ab34bcd8-2a66-4d88-b7b1-0098f488dc39.png" width="700" height="400" />
 
-### My Donations - Donation process
+### Donation process
 
-<img src="https://user-images.githubusercontent.com/68044754/161121199-2b58ce72-5e02-4198-9ff1-6b0aadfbf51a.gif" />
+<img src="https://user-images.githubusercontent.com/68044754/172446252-27490eef-80fc-4521-ab9d-c0838b772156.gif" width="700" height="400" />
+
+### My Donations
+
+<img src="https://user-images.githubusercontent.com/68044754/172446247-3da221c1-990e-4bf4-aeea-4a2237569fcd.gif" width="700" height="400" />
+
+### Donation Box
+
+<img src="https://user-images.githubusercontent.com/68044754/172446152-971bb473-0fa6-456a-a4e0-9c9a0f9e1b5f.png" width="700" height="400" />
 
 ### My Profile
 
-<img src="https://user-images.githubusercontent.com/68044754/161121194-37208977-2eb5-4b50-aa2c-68d51002bd40.gif" />
+<img src="https://user-images.githubusercontent.com/68044754/172446294-c3978ab8-30fb-415a-a30b-facf23c09ffc.gif" width="700" height="400" />
+
+The Reward depends on the amount of donations.  <br /><br />
+<img src="https://user-images.githubusercontent.com/68044754/172448865-5d236bf0-e721-4531-836a-6090ee63a381.png" width="350" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/172448864-271fd499-62c5-4655-8da0-7322a990eb98.png" width="350" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/172448861-ed234a36-fa69-443a-b654-7d541a80b6d3.png" width="350" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/172448868-9ad28372-073e-4342-873e-17d15d1ccbb6.png" width="350" height="200" />
+<img src="https://user-images.githubusercontent.com/68044754/172448866-ab116f4b-82b7-4d4c-a010-a7d323bd917f.png" width="350" height="200" />
 
 ### [Administor] Donations
 
 The page for administrators to check the donation list and approve or reject donations.
 
-<img src="https://user-images.githubusercontent.com/68044754/161121169-18b6d170-045c-445b-a3aa-1be1d530d890.gif" />
+<img src="https://user-images.githubusercontent.com/68044754/172447240-23ed3011-5205-49a1-a1ab-3fbe75ae8b96.gif" />
 
-### About Us
 
-<img src="https://user-images.githubusercontent.com/68044754/161121209-2f1a8453-90d0-4b2c-9601-5b8b8cdc70f4.gif"/>
+### About BeanYard
+
+<img src="https://user-images.githubusercontent.com/68044754/172446794-b5f38b58-27df-40b0-bfb2-79ac65c506c2.gif"  width="700" height="400"/> 
+
+### Our History
+
+<img src="https://user-images.githubusercontent.com/68044754/172446262-01d3ac8b-1a0b-47bc-a5c1-67f7cc9dfb74.gif"  width="700" height="400"/> 
+
+### Our Team
+
+<img src="https://user-images.githubusercontent.com/68044754/172446272-4813f404-b4a9-4b5f-97e0-9c7dd2f5722d.gif"  width="700" height="400"/> 
 
 - UI/UX implement
     
