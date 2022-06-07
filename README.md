@@ -83,8 +83,8 @@
 
 ### Signup & Login
 
-<img src="https://user-images.githubusercontent.com/68044754/161121247-971092ee-2fb2-4828-a19c-0e817c5c1e02.png" width="700" height="400" />
-<img src="https://user-images.githubusercontent.com/68044754/161121251-ab34bcd8-2a66-4d88-b7b1-0098f488dc39.png" width="700" height="400" />
+<img src="https://user-images.githubusercontent.com/68044754/172452184-5ec3d32a-b23e-4a13-9635-9d9094d3ed7a.png" width="700" height="400" />
+<img src="https://user-images.githubusercontent.com/68044754/172452182-59362c07-c082-49fd-9e79-3557f774b74e.png" width="700" height="400" />
 
 ### Donation process
 
@@ -128,18 +128,6 @@ The page for administrators to check the donation list and approve or reject don
 
 <img src="https://user-images.githubusercontent.com/68044754/172446272-4813f404-b4a9-4b5f-97e0-9c7dd2f5722d.gif"  width="700" height="400"/> 
 
-- UI/UX implement
-    
-    UI
-    
-    - The farm owner's UI was moved to the manager's page UI, which showed a general approach in the form of a coffee grounds collection list at a glance and a map and a cafe location when clicked on one.
-    
-    UX
-    
-    - The Main page in the existing Header was replaced with intuitive keywords such as ‘My Donations’ for cafe owners and ‘Donations’ for admins to ease confusion.
-    - ‘About us’ and ‘How to’ in the Header seemed to overlap at once, so we improved it by leaving only ‘About us’ to show the data we collected through donations.
-    - It has been improved to be able to return to the previous step when entering information during the donation steps.
-    - At the donation process, it specifies how to pack the coffee grounds, the address where the courier will be sent, and how to process the delivery fee.
 <br><br>
 
 ## 👩‍💻 Tech. Stacks
